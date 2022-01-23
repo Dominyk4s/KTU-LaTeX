@@ -1,5 +1,5 @@
 # KTU-LaTeX
-Latex template for Kaunas Technology University
+**Unoficial** Latex template for Kaunas Technology University projects/thesis/etc.
 
 ## Files
 * main.tex - contains the main document, with \documentclass and \begin{document} 
