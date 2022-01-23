@@ -1,0 +1,129 @@
+% All styles of the document
+
+\usepackage[utf8]{inputenc}
+
+% Font: Times New Roman, 12 pt
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{graphicx}
+
+% the paper size and margins: A4 (210 x 297 mm), margins: left – 30 mm, right – 10 mm, top and bottom – 20 mm.
+\usepackage[a4paper, left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
+
+% headers and footers
+\usepackage{fancyhdr}
+% Clear the header and footer
+\fancyhead{}
+\fancyfoot{}
+
+%customize page numbering on right hand side
+\fancypagestyle{plain}{% Redefining plain page style
+  \fancyhf{} %clear all header and footer fields
+  \fancyfoot[RO]{\thepage}
+}%
+\fancyhf{} %clear all header and footer fields
+\fancyfoot[RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}% Fancy page style
+
+
+
+
+% Line spacing – 1,15
+\usepackage{setspace}
+\setstretch{1.15}
+
+% Tarpas tarp teksto pastraipų: Atstumas prieš pastraipą, po pastraipos ir tarp jų – 10 pt, lentelėse – 3 pt.
+\setlength{\parskip}{10pt}
+
+% Teksto lygiuotė: Abipusė, pirmos pastraipos eilutės įtrauka nedaroma (nuimama įtrauka):
+\setlength{\parindent}{0em}
+
+
+% Section in new page and section styles:
+\usepackage{titlesec}
+\titleformat{\section}
+	{\normalfont\fontsize{12}{10} %font and spacing
+	\bfseries} 
+	 {\thesection.\quad} % dot after section
+	{0em}{} 
+\titleformat{\subsection}
+	{\normalfont\fontsize{12}{10} %font and spacing
+	\bfseries} 
+	 {\thesubsection.\quad} % dot after section
+	{0em}{} 
+\titleformat{\subsubsection}
+	{\normalfont\fontsize{12}{10} %font and spacing
+	\bfseries} 
+	 {\thesubsubsection.\quad} % dot after section
+	{0em}{} 
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=cyan,
+    %citecolor=black, %Comment out while working, easier to see cite
+}
+
+% skaldymas per sekcijas:
+\titleclass{\section}{top}
+\newcommand\sectionbreak{\clearpage}
+
+
+\usepackage{enumitem} %numeravimui, bullet pointams
+
+% \usepackage[lithuanian]{babel}
+\usepackage[english]{babel}
+
+
+
+% for tables
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+
+% Captions formatting
+% Caption, Title of the figure: Font size 11 pt., line spacing – 1.15, spacing before and after a title – 10 pt., centered
+% Title of the table: For the titles of the tables (number and a word table are written in bold font).
+\usepackage[%justification=centering, %centering captions
+	font={small, %using small font (if doc is 12pt, small is 11pt)
+		stretch=1.15 %line spacing – 1.15
+		}, 
+	tableposition=top,
+	figureposition=bottom,
+	labelfont=bf % Bold font for "Figure" and "Table"
+	]{caption} 
+	
+\captionsetup[figure]{name=Fig.} %If need to change from Figure to Fig. as in template example
+
+\captionsetup[table]{justification=raggedright} 
+\captionsetup[figure]{justification=centering} 
+
+\usepackage{subcaption}
+
+
+% use section number in table and figure captions
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+
+% don't put charts before section
+% \usepackage[section]{placeins}
+
+
+
+% math:
+\usepackage{amsmath}
+
+
+
+% Bibliography
+\usepackage[numbers]{natbib}
+\bibliographystyle{unsrtnat} % Sorting by appearance
+% \setcitestyle{authoryear,open={(},close={)}}  %Custom cite style if needed
+
+%Citation-related commands:
+\usepackage{csquotes}
