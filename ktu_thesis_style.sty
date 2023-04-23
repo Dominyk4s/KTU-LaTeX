@@ -1,13 +1,16 @@
 % All styles of the document
 
 \usepackage[utf8]{inputenc}
+\usepackage{mfirstuc} % For title capitalization
+\MFUnocap{the}\MFUnocap{and} %Not capitalising "the" and "and"
+
 
 % Font: Times New Roman, 12 pt
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage{graphicx}
 
-% the paper size and margins: A4 (210 x 297 mm), margins: left – 30 mm, right – 10 mm, top and bottom – 20 mm.
+% Paper size and margins: A4 (210 x 297 mm), margins: left – 30 mm, right – 10 mm, top and bottom – 20 mm.
 \usepackage[a4paper, left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
 
 % headers and footers
@@ -15,6 +18,8 @@
 % Clear the header and footer
 \fancyhead{}
 \fancyfoot{}
+
+% Requirement: Puslapių numeravimas: Puslapiai numeruojami nuosekliai, skaičiuojant nuo antraštinio lapo, o pradedami rašyti nuo turinio. Puslapio numeris rašomas apatinės paraštės dešinėje pusėje arabiškais skaitmenimis be taškų.
 
 %customize page numbering on right hand side
 \fancypagestyle{plain}{% Redefining plain page style
@@ -41,22 +46,22 @@
 \setlength{\parindent}{0em}
 
 
-% Section in new page and section styles:
+% Teksto skirstymas į dalis ir jų numeracija: Skyrius pradedamas naujame puslapyje
 \usepackage{titlesec}
 \titleformat{\section}
-	{\normalfont\fontsize{12}{10} %font and spacing
+	{\normalfont\fontsize{12}{10} %fonto dydis ir tarpai po/pries sekcija
 	\bfseries} 
-	 {\thesection.\quad} % dot after section
+	 {\thesection.\quad} % taškas po sekcijos
 	{0em}{} 
 \titleformat{\subsection}
-	{\normalfont\fontsize{12}{10} %font and spacing
+	{\normalfont\fontsize{12}{10} %fonto dydis ir tarpai po/pries sekcija
 	\bfseries} 
-	 {\thesubsection.\quad} % dot after section
+	 {\thesubsection.\quad} % taškas po sekcijos
 	{0em}{} 
 \titleformat{\subsubsection}
-	{\normalfont\fontsize{12}{10} %font and spacing
+	{\normalfont\fontsize{12}{10} %fonto dydis ir tarpai po/pries sekcija
 	\bfseries} 
-	 {\thesubsubsection.\quad} % dot after section
+	 {\thesubsubsection.\quad} % taškas po sekcijos
 	{0em}{} 
 
 \usepackage{hyperref}
@@ -68,19 +73,22 @@
     %citecolor=black, %Comment out while working, easier to see cite
 }
 
-% skaldymas per sekcijas:
+% :
 \titleclass{\section}{top}
 \newcommand\sectionbreak{\clearpage}
 
 
 \usepackage{enumitem} %numeravimui, bullet pointams
 
+
+% \RequirePackage{LTPlius}  % Nustatymų sulietuvinimas, iš VU šablono: https://github.com/LIKS/course_work_template_vu_mif_cs1
+
 % \usepackage[lithuanian]{babel}
 \usepackage[english]{babel}
 
 
 
-% for tables
+% For tables
 \usepackage{booktabs}
 \usepackage{tabularx}
 
@@ -97,7 +105,7 @@
 	labelfont=bf % Bold font for "Figure" and "Table"
 	]{caption} 
 	
-\captionsetup[figure]{name=Fig.} %If need to change from Figure to Fig. as in template example
+% \captionsetup[figure]{name=Fig.} %If need to change from Figure to Fig. as in template example
 
 \captionsetup[table]{justification=raggedright} 
 \captionsetup[figure]{justification=centering} 
@@ -105,25 +113,32 @@
 \usepackage{subcaption}
 
 
-% use section number in table and figure captions
+% Section number for figures and tables
 \usepackage{chngcntr}
 \counterwithin{table}{section}
 \counterwithin{figure}{section}
 
-% don't put charts before section
-% \usepackage[section]{placeins}
 
-
-
-% math:
 \usepackage{amsmath}
 
-
+% For charts
+\usepackage{tikz} 
 
 % Bibliography
 \usepackage[numbers]{natbib}
 \bibliographystyle{unsrtnat} % Sorting by appearance
-% \setcitestyle{authoryear,open={(},close={)}}  %Custom cite style if needed
-
-%Citation-related commands:
 \usepackage{csquotes}
+
+
+% For the table in multiple pages:
+\usepackage{longtable}
+
+%% To use \paragraph as subsubsubsection (one even deeper level section)
+%\titleformat{\paragraph}
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{setspace}
+
+
