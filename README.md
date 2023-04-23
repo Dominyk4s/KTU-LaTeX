@@ -7,3 +7,5 @@
 * TitlePage.tex - name speaks for itself, it's a title page 
 * PageSecond.tex and PageThird.tex - the pages for the thesis
 * variables.tex - variables, by which the main pages are filled in
+
+<embed src="https://github.com/Dominyk4s/KTU-LaTeX/blob/main/main.pdf" type="application/pdf" />
