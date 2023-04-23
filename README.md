@@ -8,4 +8,4 @@
 * PageSecond.tex and PageThird.tex - the pages for the thesis
 * variables.tex - variables, by which the main pages are filled in
 
-<embed src="https://github.com/Dominyk4s/KTU-LaTeX/blob/main/main.pdf" type="application/pdf" />
+<embed src="https://github.com/Dominyk4s/KTU-LaTeX/raw/main/main.pdf" type="application/pdf" />
