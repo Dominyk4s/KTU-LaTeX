@@ -2,7 +2,7 @@
 
 **Unofficial** LaTeX template for Kaunas Technology University (KTU) projects, theses, and other academic documents
 
-See the generated
+Dowlonad generated
 [PDF example here](https://github.com/Dominyk4s/KTU-LaTeX/raw/main/main.pdf)
 
 ## Repository Contents
