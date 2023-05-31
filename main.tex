@@ -7,11 +7,53 @@
 \input{variables.tex}
 
 \input{TitlePage}
+
+
+
 \input{PageSecond.tex}
 \input{PageThird.tex}
-\setcounter{page}{2} %to include title page in page numbering counter
+\input{PageSummaryEN.tex}
+\input{PageSummaryLT.tex}
+
+
+\setcounter{page}{6} %to include title page in page numbering counter
 \tableofcontents
 
-\input{chapters/dummy_text}
 
+
+\clearpage
+\listoffigures
+\addcontentsline{toc}{section}{\listfigurename} % Adds "List of Figures" to the table of contents
+
+\clearpage
+\listoftables
+\addcontentsline{toc}{section}{\listtablename} % Adds to the table of contents
+
+\clearpage
+\input{chapters/dummy_text.tex}
+
+
+
+
+\clearpage % Start a new page
+\phantomsection % Create a phantom section for correct linking in the table of contents
+\addcontentsline{toc}{section}{Conclutions} %Add to the table of contents
+\input{chapters/conclutions.tex}
+
+
+
+\clearpage 
+\phantomsection 
+\addcontentsline{toc}{section}{References}
+\bibliography{dummy-bib} % And adding references itself
+
+\clearpage 
+\phantomsection 
+\addcontentsline{toc}{section}{Appendices}
+\section*{Appendices}
+\input{chapters/appendix.tex}
+
+% To know how many pages
+\clearpage
+\label{LastPage}
 \end{document}
